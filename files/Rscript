@@ -1,0 +1,50 @@
+
+ali.prot<-read.alignment("ex7align.fasta",format="fasta")
+ali.rna<-read.alignment("ex7align-mRNA.aln",format="fasta")
+
+ali.rna.b<-as.DNAbin(ali.rna)
+d.prot<-dist.alignment(ali.prot,matrix="similarity")
+
+
+d.rna.n<-dist.dna(ali.rna.b,model="N")
+d.rna.ts<-dist.dna(ali.rna.b,model="TS")
+d.rna.tv<-dist.dna(ali.rna.b,model="TV")
+d.rna.raw<-dist.dna(ali.rna.b,model="raw")
+
+d.rna.JC69<-dist.dna(ali.rna.b,model="JC69")
+d.rna.K80<-dist.dna(ali.rna.b,model="K80")
+d.rna.F84<-dist.dna(ali.rna.b,model="F84")
+d.rna.TN93<-dist.dna(ali.rna.b,model="TN93")
+
+t.prot<-nj(d.prot)
+t.prot<-root(t.prot,outgroup=7,resolve.root=T)
+plot(t.prot)
+nodelabels()
+
+
+pdf("4dif1.pdf",paper="a4")
+par(mfrow=c(2,2))
+plot(root(nj(d.rna.n),outgroup=7,resolve.root=T),main="mRNA sequences",sub="N")
+add.scale.bar(length=10)
+plot(root(nj(d.rna.ts),outgroup=7,resolve.root=T),main="mRNA sequences",sub="TS")
+add.scale.bar(length=10)
+plot(root(nj(d.rna.tv),outgroup=7,resolve.root=T),main="mRNA  sequences",sub="TV")
+add.scale.bar(length=10)
+plot(root(nj(d.rna.raw),outgroup=7,resolve.root=T),main="mRNA sequences",sub="Raw")
+add.scale.bar(length=0.05)
+par(mfrow=c(1,1))
+dev.off()
+
+pdf("4dif2.pdf",paper="a4")
+par(mfrow=c(2,2))
+plot(root(nj(d.rna.JC69),outgroup=7,resolve.root=T),main="mRNA sequences",sub="JC69")
+add.scale.bar(length=0.05)
+plot(root(nj(d.rna.K80),outgroup=7,resolve.root=T),main="mRNA sequences",sub="K80")
+add.scale.bar(length=0.05)
+plot(root(nj(d.rna.F84),outgroup=7,resolve.root=T),main="mRNA sequences",sub="F84")
+add.scale.bar(length=0.05)
+plot(root(nj(d.rna.TN93),outgroup=7,resolve.root=T),main="mRNA sequences",sub="TN93")
+add.scale.bar(length=0.05)
+par(mfrow=c(1,1))
+dev.off()
+

@@ -1,5 +1,5 @@
 \chapter{Phylogenetic analysis}
-
+\section{Acquiring Samples}
 Because of ease of use, I chose \emph{NCBI BLAST} on \emph{UniProtKB/SwissProt} database for finding 6 mammal and a bird sequence of my protein \emph{DLG3}.
 I chose the mentioned databases, because they are well supported, and validated by many researchers.
 
@@ -20,11 +20,34 @@ I have chosen the following sequences (6 mammal, 1 bird):
 I have combined these sequences into one fasta file, \url{~/files/ex7.fasta}.
 I used \href{http://www.bioinformatics.org/sms2/rev_trans.html}{\emph{Bioinformatics.org} SMS} to translate the sequences to mRNA sequences.
 
+\section{Aligning}
 I multiple aligned both sequence file, using \href{http://www.genome.jp/tools-bin/clustalw}{Genome.jp CLUSTALW}, resulting in \url{~/files/ex7align.fasta}.
 I also used this website's tool to generate the \emph{Rooted phylogenetic tree (UPGMA)}, with and without the branch length representing the predicted distance between species.
 
+\section{Evaluation, tree plotting}
 I also applied the suggested \textbf{R} program to compare the results.
 The comparison on Figure \ref{comapre1}.
+Also I tested have analyzed the sequences with different methods using different evaluation of distance between the samples.
+Namely:
+\begin{description}
+\item[N] number of different sites
+\item[TS] number of transitions
+\item[TV] number of transversions
+\item[raw] number of differences weighted by the length of the sequences
+\end{description}
+The corresponding results can be seen on Figure \ref{r1}.
+
+Also tested many nucleotide substitution models which were mentioned in the lecture:
+\begin{itemize}
+\item JC69 
+\item K80 
+\item F84 
+\item TN93
+\end{itemize}
+The corresponding \emph{tree plots} can be seen on Figure \ref{r2}.
+
+\paragraph{The script.} The script, which I used for producing the plots can be accessed at \url{~/files/Rscript.r}  
+
 In conclusion it can be said that the original PDZ (1, 2, 3) sites are very close to each other (\texttt{Q811D0.1}, \texttt{Q62696.1}, \texttt{Q12959.2}) from phylogenetical aspect.
 
 
@@ -39,7 +62,7 @@ In conclusion it can be said that the original PDZ (1, 2, 3) sites are very clos
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{rcompare.png}
-\caption{Comparing the results of \emph{R} and \emph{Genome.jp}. Except the ordering (which can be cosidered as invariant) these trees are identical. Therefore in the following I use \emph{Genome.jp} because of the user-friendly interface.}
+\caption{Comparing the results of \emph{R} and \emph{Genome.jp}. Except the ordering (which can be cosidered as invariant) these trees are identical.}
 \label{comapre1}
 \end{figure}
 
@@ -48,5 +71,20 @@ In conclusion it can be said that the original PDZ (1, 2, 3) sites are very clos
 \includegraphics[width=\textwidth]{nodist-dist.png}
 \caption{\emph{On the left:} Tree, showing equidistant ascension. \emph{On the right:} Tree, which branches represent the distance of the corresponding sequences. It can be seen, that the original PDZ domains fall very close to each others.}
 \label{comapre2}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{4dif1.pdf}
+\caption{Visualization of simple distance measuring methods}
+\label{r1}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{4dif2.pdf}
+\caption{Result of distance calculated by complex nucleotide substitution models.}
+\label{r2}
 \end{figure}
 
