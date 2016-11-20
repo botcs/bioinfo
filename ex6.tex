@@ -1,0 +1,17 @@
+\chapter{HMM search}
+\section{Create profile HMM of PDZ domains}
+I completed the \texttt{fasta} file of the initial protein PDZ domains by looking up the matching proteins from the previous example on \emph{UniProtKB},
+ and downloaded their annotated PDZ domains as well, to \url{~/files/PDZ456.fasta}. After, I have merged the two file together  \url{~/files/PDZ1-6.fasta}, and multiple aligned the sequences on \url{http://www.genome.jp/tools/clustalw/}{\emph{Multiple Sequence Alignment by CLUSTALW}} with the same parameters as in Exercise 3. 
+I converted the output \url{~/files/ex6-align.aln} into Stockholm format using \href{http://sequenceconversion.bugaco.com/converter/biology/sequences/index.html}{Sequence converter}, the file can be found at \url{~/files/ex6.stockholm}
+
+For building the \textbf{HMM profile} I used the suggested \emph{hmmer} package.
+The profile file can be found in \url{~/files/ex6-profile.hmm}
+
+\section{HMM search}
+First I executed \texttt{hmmer} search on the database \texttt{ex5.fasta} which I created in Exercise 5. Since I completed my PDZ profile with domains sliced from proteins of the database, the matching rate was trivially very high. 
+I tested different threshold values, and saved the corresponding results in \url{ex6-mysearchE*.out} files.
+With varying $E$ threshold all of the PDZ domains were found by the algorithm, (best result with $1E-40$).
+
+Second, I used the database \emph{UniProtKB}, provided by the \href{https://www.ebi.ac.uk/Tools/hmmer/search/hmmsearch}{webserver}. Among the results I could find proteins which I have selected in my database. Compared to previous methods, this way I have found larger number of results. However the \emph{HMMer} results seems much diverse for me, while \emph{UniProt} and \emph{NCBI BLAST} listed proteins which had sequences more closer to submitted domains.
+
+In overall, proteins with differences in their initial sequences and smaller gaps (\emph{insertion}) may originate from a common ancestor, while proteins that exhibit +99\% matching rate can be considered as a \textbf{conserved} protein.
