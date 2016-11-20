@@ -1,0 +1,197 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  ex6-profile.hmm
+# target sequence database:        ex5.fasta
+# output directed to file:         ex6-mysearchE-40.out
+# sequence reporting threshold:    E-value <= 1e-40
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       ex6  [M=87]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+   1.4e-121  386.9  12.2    4.6e-45  141.7   0.3    3.6  4  EDM11459.1  discs, large homolog 1 (Drosophila), isoform CRA_
+   1.7e-121  386.6  12.2    4.6e-45  141.7   0.3    3.5  3  EDM11457.1  discs, large homolog 1 (Drosophila), isoform CRA_
+   1.7e-119  380.2  11.8    1.8e-45  143.0   0.1    3.4  3  EDM18525.1  discs, large homolog 2 (Drosophila), isoform CRA_
+     2e-119  380.0  11.8    1.8e-45  142.9   0.1    3.4  3  Q63622.1    RecName: Full=Disks large homolog 2; AltName: Ful
+   2.2e-119  379.9  11.8    1.9e-45  142.9   0.1    3.5  3  EDM18526.1  discs, large homolog 2 (Drosophila), isoform CRA_
+    6.1e-93  295.1   5.0      3e-47  148.7   1.2    2.0  2  pdb|3GSL|A  Chain A, Crystal Structure Of Psd-95 Tandem Pdz D
+
+
+Domain annotation for each sequence (and alignments):
+>> EDM11459.1  discs, large homolog 1 (Drosophila), isoform CRA_c [Rattus norvegicus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  141.7   0.3   1.8e-45   4.6e-45       1      87 []     224     310 ..     224     310 .. 0.99
+   2 !  138.8   0.4   1.5e-44   3.7e-44       1      86 [.     319     404 ..     319     405 .. 0.98
+   3 !  112.8   0.9   1.8e-36   4.5e-36       1      87 []     466     546 ..     466     546 .. 0.98
+   4 ?   -3.5   0.0       3.8       9.5      49      73 ..     697     721 ..     667     728 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 141.7 bits;  conditional E-value: 1.8e-45
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvakr 87 
+                 ei+le+G++GLGfsiaGG+dn+hi+dd sifitkii GGaa++dGrLrv+D+iL+vne d+r+vth++av+aLkeag++vrl+v++r
+  EDM11459.1 224 EITLERGNSGLGFSIAGGTDNPHIGDDSSIFITKIITGGAAAQDGRLRVNDCILRVNEADVRDVTHSKAVEALKEAGSIVRLYVKRR 310
+                 79**********************************************************************************986 PP
+
+  == domain 2  score: 138.8 bits;  conditional E-value: 1.5e-44
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvak 86 
+                 ei+l+kG+kGLGfsiaGG++nqhip+d+si++tkiieGGaa+kdG+L++gDk+Lavn+v l+evtheeav+aLk+++d v+l+vak
+  EDM11459.1 319 EIKLIKGPKGLGFSIAGGVGNQHIPGDNSIYVTKIIEGGAAHKDGKLQIGDKLLAVNSVCLEEVTHEEAVTALKNTSDFVYLKVAK 404
+                 79**********************************************************************************98 PP
+
+  == domain 3  score: 112.8 bits;  conditional E-value: 1.8e-36
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvakr 87 
+                 ++vl++Gs+GLGf+i+GG+d      +e+ifi++i++GG+ad++G+Lr+gD+i++vn+vdlr ++he+a+aaLk+ag+ v++v+++r
+  EDM11459.1 466 KVVLHRGSTGLGFNIVGGED------GEGIFISFILAGGPADLSGELRKGDRIISVNSVDLRAASHEQAAAALKNAGQAVTIVAQYR 546
+                 699*****************......**********************************************************986 PP
+
+  == domain 4  score: -3.5 bits;  conditional E-value: 3.8
+         ex6  49 vgDkiLavnevdlrevtheeavaaL 73 
+                 +++ +L+   v+ +ev + + v+ L
+  EDM11459.1 697 QEEYVLSYEPVNQQEVNYTRPVIIL 721
+                 4566888888888888887777655 PP
+
+>> EDM11457.1  discs, large homolog 1 (Drosophila), isoform CRA_a [Rattus norvegicus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  141.7   0.3   1.9e-45   4.6e-45       1      87 []     224     310 ..     224     310 .. 0.99
+   2 !  138.7   0.4   1.5e-44   3.8e-44       1      86 [.     319     404 ..     319     405 .. 0.98
+   3 !  112.8   0.9   1.8e-36   4.6e-36       1      87 []     466     546 ..     466     546 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 141.7 bits;  conditional E-value: 1.9e-45
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvakr 87 
+                 ei+le+G++GLGfsiaGG+dn+hi+dd sifitkii GGaa++dGrLrv+D+iL+vne d+r+vth++av+aLkeag++vrl+v++r
+  EDM11457.1 224 EITLERGNSGLGFSIAGGTDNPHIGDDSSIFITKIITGGAAAQDGRLRVNDCILRVNEADVRDVTHSKAVEALKEAGSIVRLYVKRR 310
+                 79**********************************************************************************986 PP
+
+  == domain 2  score: 138.7 bits;  conditional E-value: 1.5e-44
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvak 86 
+                 ei+l+kG+kGLGfsiaGG++nqhip+d+si++tkiieGGaa+kdG+L++gDk+Lavn+v l+evtheeav+aLk+++d v+l+vak
+  EDM11457.1 319 EIKLIKGPKGLGFSIAGGVGNQHIPGDNSIYVTKIIEGGAAHKDGKLQIGDKLLAVNSVCLEEVTHEEAVTALKNTSDFVYLKVAK 404
+                 79**********************************************************************************98 PP
+
+  == domain 3  score: 112.8 bits;  conditional E-value: 1.8e-36
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvakr 87 
+                 ++vl++Gs+GLGf+i+GG+d      +e+ifi++i++GG+ad++G+Lr+gD+i++vn+vdlr ++he+a+aaLk+ag+ v++v+++r
+  EDM11457.1 466 KVVLHRGSTGLGFNIVGGED------GEGIFISFILAGGPADLSGELRKGDRIISVNSVDLRAASHEQAAAALKNAGQAVTIVAQYR 546
+                 699*****************......**********************************************************986 PP
+
+>> EDM18525.1  discs, large homolog 2 (Drosophila), isoform CRA_a [Rattus norvegicus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  143.0   0.1   7.1e-46   1.8e-45       1      87 []      71     157 ..      71     157 .. 0.99
+   2 !  134.2   0.4   3.9e-43   9.8e-43       1      86 [.     166     251 ..     166     252 .. 0.98
+   3 !  109.0   1.6     3e-35   7.4e-35       1      86 [.     394     473 ..     394     474 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 143.0 bits;  conditional E-value: 7.1e-46
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvakr 87 
+                 ei+le+G++GLGfsiaGG+dn+hi+dd++ifitkii+GGaa++dGrLrv+D+iL+vnevd++ev+h++av+aLkeag++vrl+v++r
+  EDM18525.1  71 EITLERGNSGLGFSIAGGTDNPHIGDDPGIFITKIIPGGAAAEDGRLRVNDCILRVNEVDVSEVSHSKAVEALKEAGSIVRLYVRRR 157
+                 79**********************************************************************************986 PP
+
+  == domain 2  score: 134.2 bits;  conditional E-value: 3.9e-43
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvak 86 
+                 ei+l kG+kGLGfsiaGG++nqhip+d+si++tkii+GGaa+kdGrL+vgD++L+vn+  l+evtheeava Lk+++dvv+l+v k
+  EDM18525.1 166 EIKLFKGPKGLGFSIAGGVGNQHIPGDNSIYVTKIIDGGAAQKDGRLQVGDRLLMVNNYSLEEVTHEEAVAILKNTSDVVYLKVGK 251
+                 79*********************************************************************************976 PP
+
+  == domain 3  score: 109.0 bits;  conditional E-value: 3e-35
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvak 86 
+                 ++vl+kGs+GLGf+i+GG+d      +e+if+++i++GG+ad++G+L++gD+iL+vn++dlr ++he+a+aaLk ag++v++++++
+  EDM18525.1 394 KVVLHKGSTGLGFNIVGGED------GEGIFVSFILAGGPADLSGELQRGDQILSVNGIDLRGASHEQAAAALKGAGQTVTIIAQY 473
+                 699*****************......*********************************************************998 PP
+
+>> Q63622.1  RecName: Full=Disks large homolog 2; AltName: Full=Channel-associated protein of synapse-110; Short=Chapsyn
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  142.9   0.1   7.4e-46   1.8e-45       1      87 []      98     184 ..      98     184 .. 0.99
+   2 !  134.1   0.4   4.1e-43     1e-42       1      86 [.     193     278 ..     193     279 .. 0.98
+   3 !  108.9   1.6   3.1e-35   7.8e-35       1      86 [.     421     500 ..     421     501 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 142.9 bits;  conditional E-value: 7.4e-46
+       ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvakr 87 
+               ei+le+G++GLGfsiaGG+dn+hi+dd++ifitkii+GGaa++dGrLrv+D+iL+vnevd++ev+h++av+aLkeag++vrl+v++r
+  Q63622.1  98 EITLERGNSGLGFSIAGGTDNPHIGDDPGIFITKIIPGGAAAEDGRLRVNDCILRVNEVDVSEVSHSKAVEALKEAGSIVRLYVRRR 184
+               79**********************************************************************************986 PP
+
+  == domain 2  score: 134.1 bits;  conditional E-value: 4.1e-43
+       ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvak 86 
+               ei+l kG+kGLGfsiaGG++nqhip+d+si++tkii+GGaa+kdGrL+vgD++L+vn+  l+evtheeava Lk+++dvv+l+v k
+  Q63622.1 193 EIKLFKGPKGLGFSIAGGVGNQHIPGDNSIYVTKIIDGGAAQKDGRLQVGDRLLMVNNYSLEEVTHEEAVAILKNTSDVVYLKVGK 278
+               79*********************************************************************************976 PP
+
+  == domain 3  score: 108.9 bits;  conditional E-value: 3.1e-35
+       ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvak 86 
+               ++vl+kGs+GLGf+i+GG+d      +e+if+++i++GG+ad++G+L++gD+iL+vn++dlr ++he+a+aaLk ag++v++++++
+  Q63622.1 421 KVVLHKGSTGLGFNIVGGED------GEGIFVSFILAGGPADLSGELQRGDQILSVNGIDLRGASHEQAAAALKGAGQTVTIIAQY 500
+               699*****************......*********************************************************998 PP
+
+>> EDM18526.1  discs, large homolog 2 (Drosophila), isoform CRA_b [Rattus norvegicus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  142.9   0.1   7.8e-46   1.9e-45       1      87 []     133     219 ..     133     219 .. 0.99
+   2 !  134.1   0.4   4.3e-43   1.1e-42       1      86 [.     228     313 ..     228     314 .. 0.98
+   3 !  108.8   1.6   3.3e-35   8.2e-35       1      86 [.     456     535 ..     456     536 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 142.9 bits;  conditional E-value: 7.8e-46
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvakr 87 
+                 ei+le+G++GLGfsiaGG+dn+hi+dd++ifitkii+GGaa++dGrLrv+D+iL+vnevd++ev+h++av+aLkeag++vrl+v++r
+  EDM18526.1 133 EITLERGNSGLGFSIAGGTDNPHIGDDPGIFITKIIPGGAAAEDGRLRVNDCILRVNEVDVSEVSHSKAVEALKEAGSIVRLYVRRR 219
+                 79**********************************************************************************986 PP
+
+  == domain 2  score: 134.1 bits;  conditional E-value: 4.3e-43
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvak 86 
+                 ei+l kG+kGLGfsiaGG++nqhip+d+si++tkii+GGaa+kdGrL+vgD++L+vn+  l+evtheeava Lk+++dvv+l+v k
+  EDM18526.1 228 EIKLFKGPKGLGFSIAGGVGNQHIPGDNSIYVTKIIDGGAAQKDGRLQVGDRLLMVNNYSLEEVTHEEAVAILKNTSDVVYLKVGK 313
+                 79*********************************************************************************976 PP
+
+  == domain 3  score: 108.8 bits;  conditional E-value: 3.3e-35
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvak 86 
+                 ++vl+kGs+GLGf+i+GG+d      +e+if+++i++GG+ad++G+L++gD+iL+vn++dlr ++he+a+aaLk ag++v++++++
+  EDM18526.1 456 KVVLHKGSTGLGFNIVGGED------GEGIFVSFILAGGPADLSGELQRGDQILSVNGIDLRGASHEQAAAALKGAGQTVTIIAQY 535
+                 699*****************......*********************************************************998 PP
+
+>> pdb|3GSL|A  Chain A, Crystal Structure Of Psd-95 Tandem Pdz Domains 1 And 2 >pdb|3GSL|B Chain B, Crystal Structure Of
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  148.4   0.1   1.4e-47   3.5e-47       1      87 []       8      94 ..       8      94 .. 0.99
+   2 !  148.7   1.2   1.2e-47     3e-47       1      86 [.     103     188 ..     103     189 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 148.4 bits;  conditional E-value: 1.4e-47
+         ex6  1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvakr 87
+                ei+le+G++GLGfsiaGG+dn+hi+dd+sifitkii+GGaa++dGrLrv+D+iL+vnevd+revth++av+aLkeag++vrl+v++r
+  pdb|3GSL|A  8 EITLERGNSGLGFSIAGGTDNPHIGDDPSIFITKIIPGGAAAQDGRLRVNDSILFVNEVDVREVTHSAAVEALKEAGSIVRLYVMRR 94
+                79**********************************************************************************997 PP
+
+  == domain 2  score: 148.7 bits;  conditional E-value: 1.2e-47
+         ex6   1 eivlekGskGLGfsiaGGidnqhipddesifitkiieGGaadkdGrLrvgDkiLavnevdlrevtheeavaaLkeagdvvrlvvak 86 
+                 ei+l+kG+kGLGfsiaGG++nqhip+d+si++tkiieGGaa+kdGrL++gDkiLavn+v+l++v+he+avaaLk+++dvv+l+vak
+  pdb|3GSL|A 103 EIKLIKGPKGLGFSIAGGVGNQHIPGDNSIYVTKIIEGGAAHKDGRLQIGDKILAVNSVGLEDVMHEDAVAALKNTYDVVYLKVAK 188
+                 79**********************************************************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (87 nodes)
+Target sequences:                           15  (7360 residues searched)
+Passed MSV filter:                        10  (0.666667); expected 0.3 (0.02)
+Passed bias filter:                       10  (0.666667); expected 0.3 (0.02)
+Passed Vit filter:                        10  (0.666667); expected 0.0 (0.001)
+Passed Fwd filter:                        10  (0.666667); expected 0.0 (1e-05)
+Initial search space (Z):                 15  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 64.03
+//
+[ok]
