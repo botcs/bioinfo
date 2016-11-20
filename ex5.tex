@@ -1,0 +1,14 @@
+\section{Finding similar proteins: BLAST}
+
+I visited \href{https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins&PROGRAM=blastp&BLAST_PROGRAMS=blastp&PAGE_TYPE=BlastSearch&BLAST_SPEC=blast2seq&DATABASE=n/a&QUERY=&SUBJECTS=}{NCBI BLAST}, and uploaded the whole sequence (\texttt{Q62936.fasta}). After I searched database \textbf{Non-redundant protein sequences (nr)} using \textbf{Blastp (protein-protein BLAST)}, I restricted the search to species \textbf{Rattus Norvegicus}. The summary of the results are shown on Figure \ref{blastsum}.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{blast.png}
+\caption{Result of searching database \textbf{Non-redundant protein sequences (nr)}}
+\label{blastsum}
+\end{figure}
+
+As it can be seen, the search resulted in very high number of \emph{perfect} matches. This fact I would consider the hypothesis that the protein was evolutionary conserved over time, because its structure is replicated to many other similar proteins.
+
+I chose the proteins listed in \url{~/files/ex5.fasta}, because they exhibit high level of \texttt{Query cover}, according to \href{https://blast.ncbi.nlm.nih.gov/Blast.cgi}{NCBI BLAST} and at the same time low level of actual identity.
